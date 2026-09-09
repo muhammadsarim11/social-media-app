@@ -22,7 +22,40 @@ role:{
     type: String,
     enum: ['admin', 'user'],
     default: 'user'
-  } 
+  },
+  
+  profileImage:{
+    type:String
+  },
+
+  coverImage:{
+    type:String
+  },
+  bio:{
+    type:String
+  },
+
+  gender:{
+    type:String
+  },
+privacy:{
+    type:String,
+    enum:["public","private"],
+    default:"public"
+},
+
+socialLinks:[
+  { 
+     instagram:{
+        type:String
+
+    },
+    facebook:{
+        type:String
+
+    }
+}
+]
 },{timestamps:true})
 
 

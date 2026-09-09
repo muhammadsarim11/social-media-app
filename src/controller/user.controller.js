@@ -56,7 +56,7 @@ export const RegisterUser = async (req, res) => {
 
 
     res.cookie('refreshToken', refreshToken).status(200).json({
-        message: "created",
+        message: "createdddd",
         users,
         accessToken
     })
