@@ -11,7 +11,7 @@ import {resetPasswordTemplate} from '../../utils/emailTemplates.js'
 
 export const RegisterUser = async (req, res) => {
 
-    const { username, email, password , role } = req.body
+    const { username, email, password , role , gender , bio } = req.body
     if (!username || !email || !password) {
         return res.status(400).json({
             message: "fill all fields"
@@ -22,7 +22,9 @@ export const RegisterUser = async (req, res) => {
         username,
         email,
         password: HashedPassword,
-        role
+        role,
+        gender,
+        bio
     })
 
     let payload = {

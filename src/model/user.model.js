@@ -38,11 +38,11 @@ role:{
   gender:{
     type:String
   },
-privacy:{
-    type:String,
-    enum:["public","private"],
-    default:"public"
-},
+
+  isPublic:{
+    type:Boolean,
+    default:true
+  },
 
 socialLinks:[
   { 
