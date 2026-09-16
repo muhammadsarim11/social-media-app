@@ -9,7 +9,7 @@ import { createPost } from '../controller/post.controller.js'
 const router = express.Router()
 
 
-router.post('/create',  AuthProtect, upload.single('image'), createPost);
+router.post('/create',  upload.single('image'), createPost);
 
 
 

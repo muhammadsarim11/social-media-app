@@ -7,10 +7,9 @@ return res.status(400).json({ status: 'fail', message: 'Image isrequired' });
  }
 const post = await Post.create({
 caption: caption,
-image: `/uploads/${req.file.filename}`,
-userId: req.user._id
-
-
+image: req.file.path,
+// userId: req.user._id
+userId:"6aa7cc9cd3b3b3dd8aeb82f7"
  });
  res.status(201).json({ status: 'success', data: post });
  } catch (err) {
